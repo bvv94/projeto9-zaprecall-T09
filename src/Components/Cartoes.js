@@ -4,7 +4,7 @@ import styled from "styled-components"
 export default function Cartoes() {
     let i = 1;
 
-    const cartoes = [
+    const objcartao = [
         { pergunta: "O que é JSX?", resposta: "Uma extensão da linguagem JavaScript" },
         { pergunta: "O React é __", resposta: "Uma biblioteca JavaScript para construção de interfaces" },
         { pergunta: "Componentes devem iniciar com __", resposta: "Letra maiúscula" },
@@ -17,12 +17,13 @@ export default function Cartoes() {
 
     return (
         <>
-            {cartoes.map((c, index) => <Cartao>Pergunta {index+1}<ion-icon name="play-outline">icone</ion-icon></Cartao>)}
+            {objcartao.map((c, index) => <Cartao key={index}>Pergunta {index+1}<ion-icon name="play-outline">icone</ion-icon></Cartao>)}
         </>
     )
 }
 
 const Cartao = styled.div`
+    font-family: 'recursive';
     width: 300px;
     height: 35px;
     background-color: #FFFFFF;
