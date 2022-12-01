@@ -1,5 +1,5 @@
 import NavBar from "./Components/NavBar";
-import Cartoes from "./Components/Cartoes";
+import Deck from "./Components/Deck";
 import BarraInferior from "./Components/BarraInferior"
 import styled from "styled-components";
 
@@ -7,7 +7,7 @@ export default function App() {
   return (
     <Conteudo>
       <NavBar />
-      <Cartoes />
+      <Deck />
       <BarraInferior />
     </Conteudo>
 
