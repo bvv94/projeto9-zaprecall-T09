@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
-export default function BarraInferior ({objcartao}){
+export default function BarraInferior ({cont, objcartao}){
 
     const perguntasrespondidas = objcartao.length;
 
     return (
         <Barra>
-            <p>{perguntasrespondidas}/8 CONCLUÍDOS</p>
+            <p>{cont}/{perguntasrespondidas} CONCLUÍDOS</p>
         </Barra>
     )
 }

@@ -1,16 +1,25 @@
 import styled from "styled-components"
-import Deck from "./Deck";
+// import Deck from "./Deck";
 import setavirar from "../assets/seta_virar.png"
+import Resposta from "./Resposta"
 
 
-export default function Textopergunta({icone, index, texto, useTexto, objcartao, useImagem}) {
+export default function Pergunta({useIcone, imagem, icone, index, texto, useTexto, objcartao, useImagem}) {
 
     console.log("Textoperguntaimprimir")
 
-    const perg = objcartao[index].pergunta
-    useTexto(perg)
-    console.log(perg)
     useImagem (setavirar)     
+
+    // return (
+    //     <> chegou na pergunta
+            {objcartao.map((ob, index) =>
+                <Cartao key={index} >
+                    <p>{ob.pergunta}</p>
+                    {/* <p>{o.resposta}</p> */}
+                    <img src={imagem} alt= "setavirar" onClick={() => Resposta({icone, index, texto, useTexto, objcartao, useImagem })} />
+                </Cartao>)}
+    //     </>
+    // )
      
 }
 
@@ -28,7 +37,6 @@ const Cartao = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     ion-icon {
         width: 20px;
         height: 23px;

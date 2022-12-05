@@ -14,11 +14,9 @@ const Logo = styled.div`
     display: flex;
     align-items: center;
     margin: 40px 0 20px 0;
-
     img {
         width: 52px;
     }
-
     p {
         font-family: 'Righteous';
         font-style: normal;
